@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #cfbaa7;
+}
+
+#login-form {
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button,
+#backBtn {
+  color: white;
+  padding: 14px 20px;
+  margin: 6px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#loginBtn {
+  background-color: #04AA6D;
+  font-size: 1em;
+}
+
+#backBtn {
+  font-size: 1em;
+}
+
+button:hover,
+#backBtn:hover {
+  opacity: 0.8;
+}
+
+#backBtn {
+  background-color: #f44336;
+} 
+
+#login-form {
+  width: 70%;
+  margin: 0 auto;
+  border: solid 1px #8f4f0e;
+}
+
+label {
+  color: #8f4f0e;
+  font-weight: bold;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 10%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  #backBtn {
+     width: 100%;
+  }
+}

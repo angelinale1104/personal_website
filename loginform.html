@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title> Login Form </title>
+    <link href= "loginform.css" rel="stylesheet"/> 
+  </head>
+  <body>
+    <main>
+      <div id="login-form">
+        <form>
+          <div class="imgcontainer">
+            <img src="./images/logo/new-logo.avif" alt="Avatar" class="avatar" width="50">
+          </div>
+  
+          <div class="container">
+            <label for="email"><b>Email</b></label>
+            <br><br>
+            <input type="text" placeholder="Enter Email" id="email">
+            <br><br>
+            <label for="password"><b>Password</b></label>
+            <br><br>
+            <input type="password" placeholder="Enter Password" id="password" autocomplete="on">
+            <br><br>
+            <button type="button" id="loginBtn">Login</button>
+            <br><br>
+            <button type="button" id="backBtn" onclick="window.location.href='crud.html'">Go Back</button>
+          </div>
+
+          <!-- TODO: How to validate that the user is actually logged in before making any changes? -->
+        </form>
+      </div>
+    </main>
+    <script type="module">
+      // Import the functions we need from the SDKs
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+      import {
+        getAuth, 
+        signInWithEmailAndPassword, 
+        createUserWithEmailAndPassword,
+        onAuthStateChanged,
+        connectAuthEmulator,
+        signOut} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
+      
+      // Web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCkqGr45f0DZUPOsJNnJ3lKTD0J9fBOBrQ",
+        authDomain: "cse134-hw5-353d9.firebaseapp.com",
+        projectId: "cse134-hw5-353d9",
+        storageBucket: "cse134-hw5-353d9.appspot.com",
+        messagingSenderId: "505738585134",
+        appId: "1:505738585134:web:47a085f56187abef79ebbf",
+        measurementId: "G-YL1TLYN0EG"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      // Connect the Authentication Emulator
+      const auth = getAuth(app);
+      // connectAuthEmulator(auth, "http://localhost:9099");
+       
+      // Authenticate the login email and password
+      let txtEmail = document.getElementById("email");
+      let txtPassword = document.getElementById("password");
+
+      const loginEmailPassword = async() => {
+        let loginEmail = txtEmail.value;
+        let loginPassword = txtPassword.value;
+
+        localStorage.setItem("localEmail", JSON.stringify(loginEmail));
+
+        
+        try{
+          let userCredential = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
+          console.log(userCredential.user);
+          alert("You are successfully logged in! :)");
+          monitorAuthState();
+        }
+        catch (error) {
+          console.log(error);
+          alert("There is an error! You are not logged in :(");
+        }
+      }
+
+      let btnLogin = document.getElementById("loginBtn");
+      btnLogin.addEventListener("click", loginEmailPassword);
+
+      const monitorAuthState = async() => {
+        onAuthStateChanged(auth, user => {
+          if (user) {
+            window.location.href = "editcrud.html";
+          }
+          else {
+            alert("You are not logged in!")
+          }
+        });
+      }       
+    </script>
+  </body>
+</html>

@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Angelina's Personal Portfolio - CSE 134B HW5">
+    <meta name="author" content="Angelina Le">
+    <meta name="viewport" content="width=device-width">    
+
+    <title>Angelina's Personal Portfolio - HW5</title>
+    <link rel="icon" type="image/x-icon" href="images/logo/logo.avif">
+
+    <!-- Placeholder for the link and script tags-->
+    <link href= "styles.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="whole-page-wrapper">
+      <header>
+        <section id="top-bar">
+          <div class = "logo-title">
+            <picture>
+              <source type="image/avif" srcset="images/logo/new-logo.avif">
+              <img src="images/logo/new-logo.png" id = "logo" alt="Portfolio Logo" height="90">
+            </picture>
+            <h1>
+              Personal Portfolio
+            </h1>
+            <!-- <a href="./crud.html">
+              <input type="submit" value="View Blog" id="view-button"/>
+            </a> -->
+          </div>
+          <div class="navbar">
+            <nav class="custom-navbar menu">
+              <ul class="menu__list container">
+                <li class="menu__group"><a href="#education" class="menu__link nav-link text-underlined">Education</a></li>
+                <li class="menu__group"><a href="#work-experience" class="menu__link nav-link text-underlined">Work Experience</a></li>
+                <li class="menu__group"><a href="#skills" class="menu__link nav-link text-underlined">Skills</a></li>
+                <li class="menu__group"><a href="#projects" class="menu__link nav-link text-underlined">Projects</a></li>
+                <li class="menu__group"><a href="#about-me" class="menu__link nav-link text-underlined">About Me</a></li>
+                <li class="menu__group"><a href="#contact" class="menu__link nav-link text-underlined">Contact Me</a></li>
+                <li class="menu__group"><a href="methodtest.html" class="menu__link nav-link text-underlined">HTTP</a></li>
+                <li class="menu__group"><a href="crud.html" class="menu__link nav-link text-underlined">View Blog</a></li>
+              </ul>
+            </nav>
+          </div>      
+        </section>
+      </header>
+
+      <main>
+        <!-- This section is for the Introduction section-->
+        <section id="homepage" data-aos="fade-up" data-aos-duration="2000">
+          <div id = "left-box">
+            <h2 id="name">Hello, this is <br> <span> Angelina Le </span></h2>
+            <p>
+              I am an excited and passionate aspiring software engineer 
+              who is interested in software engineer, web development and Android app developing.
+              I am currently learning how to develop website using HTML/ CSS/ Javascript and 
+              how to develop apps for Android devices. I am looking to collaborate and learn more by working on 
+              cool projects together such as a fancy website or a fun Android app.
+            </p>
+            <nav>
+              <a href="#education">Education</a> |
+              <a href="#work-experience">Work Experience</a> |
+              <a href="#skills">Skills</a> |
+              <a href="#projects">Projects</a> |
+              <a href="#about-me">About Me</a> |
+              <a href="#contact">Contact Me</a> 
+            </nav>
+          </div>
+          <div> 
+            <aside>
+              <img src="images/Angelina-Portrait.avif" alt="My Portrait" width="300" height="300">
+            </aside>
+          </div>
+        </section>
+
+        <!-- This section is for the Education section-->
+        <section id="education" data-aos="fade-up" data-aos-duration="2000">
+          <h2 id="education-title" class="font-effect-shadow-multiple"> Education </h2>
+          <div id = "education-content">
+            <figure>  
+              <img src="images/ucsd.jpg" alt="UCSD" width="350" height="250">
+              <figcaption>
+                To learn more about University of California - San Diego, <br>
+                <a class="figcaption-link" href="https://ucsd.edu/" target="_blank" rel="noopener noreferrer"> Click Here </a>
+              </figcaption>
+            </figure>
+            
+            <div id = "bullet-points"> 
+              <ul>
+                <li> I am currently a Junior student at University of California, San Diego </li>
+                <li> <b><u>Major</u></b>: Computer Engineering </li>
+                <li> <b><u>GPA</u></b>: <i>3.75/ 4.00</i></li>
+                <li> <b><u>Graduation Date</u></b>: <i>06/2023</i></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- This section is for the Work Experience section-->
+        <section id="work-experience" data-aos="fade-up" data-aos-duration="2000">
+          <h2 id="work" class="font-effect-shadow-multiple"> Work Experience </h2>
+          <div id = "work-content1" data-aos="fade-right" data-aos-duration="2000">
+            <figure>
+              <img src="images/work-experience/cse-department.jpg" alt="UCSD CSE Department" width="350" height="250">
+              <figcaption>
+                To learn more about the <br>
+                Computer Science & Engineering department at UCSD, <br>
+                <a class="figcaption-link" href="https://cse.ucsd.edu/" target="_blank" rel="noopener noreferrer"> Click Here </a>
+              </figcaption>
+            </figure>
+            
+            <div id = "bullet-points-work1">
+              <h3>Undergraduate Computer Science Tutor </h3>
+              <h3>(09/2021 - Present) & (09/2020 - 12/2020)</h3>
+              <ul>
+                <li>Attend weekly live lectures. </li>
+                <li>Lead weekly lab sections for 5 - 6 students.</li>
+                <li>Hold tutor hours to help students with material-related concerns.</li>
+                <li>Grade students' assignments, midterms, and final exams.</li>
+                <li>Have weekly staff meetings.</li>
+                <li>Complete any additional tasks required by the instructors.</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="divider"> »•» 🌸🌸🌸🌸🌸🌸🌸🌸🌸 «•« </p>
+          
+          <div id = "work-content2" data-aos="fade-left" data-aos-duration="2000">
+            <figure>
+              <img id="trio" src="images/work-experience/trio-logo.jpg" alt="TRIO" width="350" height="350">
+              <figcaption>
+                To learn more about the <br>
+                TRIO Student Support Services, <br>
+                <a class="figcaption-link" href="https://oasis.ucsd.edu/programs/trio/index.html" target="_blank" rel="noopener noreferrer"> Click Here </a>
+              </figcaption>
+            </figure>
+            
+            <div id = "bullet-point-work2">
+              <h3>Administrative Coordinator </h3>
+              <h3>(09/2021 - Present)</h3>
+              <ul>
+                <li>Plan, organize and set up program events.</li>
+                <li>Input students' records to the program's filing system Blumen.</li>
+                <li>Organize and maintain the electronic database of staff and members' information</li>
+                <li>Provide written reports on the program events to the higher authority.</li>
+                <li>Serve as a resource to new TRIO members by communicating and assisting them with adjusting to college life.</li>
+              </ul>
+    
+              <h3>Administrative Intern </h3>
+              <h3>(03/2021 - 09/2021)</h3>
+              <ul>
+                <li>Supported program coordinators and assistant coordinators 
+                  with clerical and administrative tasks, 
+                  including quarterly newsletters and events.</li>
+                <li>Enhanced communication skills and teamwork <br> in an office environment.</li>
+                <li>Planned, organized, and set up program events.</li>
+                <li>Learned about different student staff positions.</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="divider"> »•» 🌸🌸🌸🌸🌸🌸🌸🌸🌸 «•« </p>
+
+          <div id = "work-content3" data-aos="fade-right" data-aos-duration="2000">
+            <figure>
+              <img id="att" src="images/work-experience/att.jpg" alt="AT&T" width="350" height="250">
+              <figcaption>
+                To learn more about the <br>
+                AT&T Summer Learning Academy 2021, <br>
+                <a class="figcaption-link" href="https://about.att.com/newsroom/2021/summer_learning_academy.html" target="_blank" rel="noopener noreferrer"> Click Here </a>
+              </figcaption>
+            </figure>
+          
+            <section id = "bullet-point-work3">
+              <h3>Extern </h3>
+              <h3> (07/2021 - 08/2021)</h3>
+              <ul>
+                <li>Acquired business, technical acumen, personal growth,
+                  professional development across 80 hours of online learning.</li>
+                <li>Gained insights and advice on business, leadership, and technology 
+                  from technology executives and experts.</li>
+                <li>Completed entry-level training in media and technology, communication, and leadership.</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <!-- This section is for the Skills section-->
+        <section id="skills" data-aos="fade-up" data-aos-duration="2000">
+          <h2 class="font-effect-shadow-multiple"> Skills </h2>
+          <fieldset data-aos="fade-up" data-aos-duration="2000">
+            <legend> Programming Languages </legend>
+            <div id = "images">
+              <div id="first-row">
+                <figure>
+                  <picture>
+                    <source type="image/avif" srcset="images/logo/python.avif">
+                    <img src="images/logo/python.png" alt = "Python" height="100"/>
+                  </picture>
+                  <figcaption> Experience Level: Proficient </figcaption>
+                </figure>
+                <figure> 
+                  <picture>
+                    <source type="image/avif" srcset="images/logo/java.avif">
+                    <img src="images/logo/java.jpg" alt = "Java" height="100"/>
+                  </picture>
+                  <figcaption> Experience Level: Proficient </figcaption>
+                </figure>
+              </div>
+              <div id="second-row">
+                <figure>
+                  <picture>
+                    <source type="image/avif" srcset="images/logo/HTML.avif">
+                    <img src="images/logo/HTML.jpg" alt = "HTML" height="100"/>
+                  </picture>
+                  <figcaption> Experience Level: Proficient </figcaption>
+                </figure>
+                <figure>
+                  <img src="images/logo/CSS.png" alt = "CSS" height="100"/>
+                  <figcaption> Experience Level: Familiar </figcaption>
+                </figure>
+                <figure>
+                  <picture>
+                    <source type="image/avif" srcset="images/logo/JS.avif">
+                    <img src="images/logo/JS.PNG" alt = "JS" height="100"/>
+                  </picture>
+                  <figcaption> Experience Level: Familiar </figcaption>
+                </figure>
+                <figure>
+                  <picture>
+                    <source type="image/avif" srcset="images/logo/C++.avif">
+                    <img src="images/logo/C++.jpg" alt = "C++" height= "100"/>
+                  </picture>
+                  <figcaption> Experience Level: Familiar </figcaption>
+                </figure>
+              </div>
+            </div>
+          </fieldset>
+
+          <div id="skills-language">
+            <fieldset id="qualification-container">
+              <legend> <span>Related</span> Qualifications <span><br> & Soft Skills</span> </legend>
+              <ol>
+                <li>Data Structures</li>
+                <li>Algorithms</li> 
+                <li>Google Workspace</li> 
+                <li>Microsoft Office</li>
+                <li>Teamwork</li>
+                <li>Communication</li> 
+                <li>Time Management</li> 
+                <li>Hard-working, flexibility and adaptability</li>
+              </ol>
+            </fieldset>
+
+            <fieldset id="flag-container">
+              <legend>Languages</legend>
+              <div id="flag-images">
+                <figure>
+                  <img src="images/us-flag.jpg" alt = "US flag" height= "100" width = "150"/>
+                  <br>
+                  <figcaption> 
+                    English <img src="icons/4-star.svg" alt="4 stars" height="20"> 
+                  </figcaption>
+                </figure>
+                <figure>
+                  <img src="images/vn-flag.png" alt = "VN flag" height= "100" width = "150"/>
+                  <br>
+                  <figcaption> 
+                    Vietnamese <img src="icons/5-star.svg" alt="5 stars" height="20">
+                  </figcaption>
+                </figure>
+              </div>
+            </fieldset>
+          </div>
+        </section>
+
+        <!-- This section is for the Projects section-->
+        <section id="projects" data-aos="fade-up" data-aos-duration="2000">
+          <h2 class="font-effect-shadow-multiple"> Projects </h2>
+          <h3 class="font-effect-fire-animation"><b><u>PROJECT 1</u>: Recipe Website</b></h3>
+          <a href="https://group21-recipe.netlify.app/" target="_blank" rel="noopener noreferrer"> Check my website here! </a>
+          <details>
+            <summary>Brief description</summary>
+            In this project, I was paired up with 10 other Undergraduate students and 
+            we are required to brainstorm and design a recipe management website. 
+            Our group has to come up with the idea, functionalities and the UI all by ourselves
+            with only a bit of guidance from the Professor and the Teaching Assistant.
+          </details>
+          <details>
+            <summary>My contribution</summary>
+            I was on the front-end team and I was one of the UI designers for this website. 
+            Regarding what I contributed to the project, I have worked on the HTML structure and the CSS style for 
+            the featured recipe card, the entire recipe viewer, and the search result page. 
+            Additionally, I also worked on the responsive mobile design for the home page as well as the shopping list page.
+            Even though I was not the team lead, I was proud of taking the initiative on most front-end tasks 
+            and being communicative throughout the whole project.
+          </details>
+
+          <br>
+          
+          <p id="desktop-demo-text"> DESKTOP VERSION </p>
+          <section class="notes"> 
+            <h4><u>Notes</u>: Please use the slideshow below to see the desktop version of my website. </h4>
+          </section>
+          <!-- Slideshow container -->
+          <div class="slider" data-aos="fade-up" data-aos-duration="2000">
+            <ul>
+              <li id="slider-1" class="slide">
+                <picture>
+                  <source type="image/avif" srcset="images/project/cse110/website-screenshot-1.avif">
+                  <img src="images/project/cse110/website-screenshot-1.png" width="500" alt="Home Page" />
+                </picture>
+                <a class="prev" href="#slider-10">prev</a>
+                <a class="next" href="#slider-2">next</a>
+              </li>
+              <li id="slider-2" class="slide">
+                <picture>
+                  <source type="image/avif" srcset="images/project/cse110/website-screenshot-2.avif">
+                  <img src="images/project/cse110/website-screenshot-2.png" width="500" alt="Result Page" />
+                </picture>
+                <a class="prev" href="#slider-1">prev</a>
+                <a class="next" href="#slider-3">next</a>           
+              </li>
+              <li id="slider-3" class="slide">
+                <picture>
+                  <source type="image/avif" srcset="images/project/cse110/website-screenshot-3.avif">
+                  <img src="images/project/cse110/website-screenshot-3.png" width="500" alt="Recipe Viewer Page" />
+                </picture>
+                <a class="prev" href="#slider-2">prev</a>
+                <a class="next" href="#slider-4">next</a>           
+              </li>
+              <li id="slider-4" class="slide">
+                <picture>
+                  <source type="image/avif" srcset="images/project/cse110/website-screenshot-4.avif">
+                  <img src="images/project/cse110/website-screenshot-4.png" width="500" alt="Shopping Page" />
+                </picture>                <a class="prev" href="#slider-3">prev</a>
+                <a class="next" href="#slider-5">next</a>          
+              </li>
+              <li id="slider-5" class="slide">
+                <picture>
+                  <source type="image/avif" srcset="images/project/cse110/website-screenshot-5.avif">
+                  <img src="images/project/cse110/website-screenshot-5.png" width="500" alt="Favorite Page" />
+                </picture>                
+                <a class="prev" href="#slider-4">prev</a> 
+                <a class="next" href="#slider-1">next</a>
+              </li>
+            </ul>
+          </div>
+          
+          <p id="mobile-demo-text"> MOBILE VERSION </p>
+          <section class="notes"> 
+            <h4><u>Notes</u>: Please play the demo videos below to see the mobile version of my website. </h4>
+          </section>
+          
+          <div id = "mobile-images-wrapper" data-aos="fade-up" data-aos-duration="2000">
+            <figure>
+              <video height="400" controls>
+                <source src="video/mobile-homepage.mp4" type = "video/mp4">
+              </video>
+              <figcaption>Home Page</figcaption>
+            </figure>
+            
+            <figure>
+              <video height="400" controls>
+                <source src="video/mobile-with-filter.mp4" type = "video/mp4">
+              </video>
+              <figcaption>Search Result Page with Filter</figcaption>
+            </figure>
+
+            <figure>
+              <video height="400" controls>
+                <source src="video/mobile-no-filter.mp4" type = "video/mp4">
+              </video>
+              <figcaption>Search Result Page without Filter</figcaption>
+            </figure>
+
+            <figure>
+              <video height="400" controls>
+                <source src="video/mobile-recipe-viewer.mp4" type = "video/mp4">
+              </video>
+              <figcaption>Recipe Viewer Page</figcaption>
+            </figure>
+
+            <figure>
+              <video height="400" controls>
+                <source src="video/mobile-shopping-demo.mp4" type = "video/mp4">
+              </video>
+              <figcaption>Shopping List</figcaption>
+            </figure>
+
+            <figure>
+              <video height="400" controls>
+                <source src="video/mobile-favorite-demo.mp4" type = "video/mp4">
+              </video>
+              <figcaption>Favorite Recipes</figcaption>
+            </figure>
+          </div>
+
+          <br><hr><br>
+
+          <b id="display-break" class="font-effect-fire-animation"><u>PROJECT 2:</u>Research Project</b>
+          <details class="ersp-details">
+            <summary>Brief description</summary>
+            <p> In our study, we would like to understand more about the barriers that 
+              non-native English speakers face while solving a programming problem. 
+              Specifically, we focus on processes like thinking-aloud that are commonly used 
+              in programming interviews and the level to which non-native English speakers are able 
+              to read and understand programming language documentation written in English. 
+              Consequently, there are 2 research questions that we would like to address. </p>
+            <ol>
+              <li>
+                We want to explore if there are any challenges that non-native English speakers 
+                face compared to that of native English speakers while talking through their steps 
+                for solving a programming problem. 
+              </li>
+              <li>
+                We want to learn if there is a difference in the way non-native English speakers 
+                read and understand programming language documentation written in English 
+                (e.g., Java Docs) when compared to native English speakers and 
+                whether this affects their performance on programming problems.
+              </li>
+            </ol>
+
+
+          </details>
+          <details class="ersp-details">
+            <summary>My contribution</summary>
+            <ul>
+              <li> Managed and led weekly group meetings.</li>
+              <li> Collaborated with 3 undergraduate students to do research about the barriers that non-native 
+                English speakers may face while solving a programming problem.</li>
+              <li> Conducted 12 interviews with native and non-native students in Computer Science courses at UC San Diego </li>
+              <li> Utilized qualitative and quantitative research skills to answer research questions. </li>
+              <li> Design the research poster. </li>
+            </ul>
+          </details>
+
+          <section id="ersp" style="text-align:center">
+            <p id="poster-text"> Research Poster </p>
+            <a href="https://drive.google.com/file/d/1SJtM--p-DHdUX3u_0yo45UctBDMlNt39/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <img class="ersp-images" src="images/project/ersp/ERSP-poster.png" alt="ERSP Poster" height="400"/>
+            </a>
+            <a id="poster-link" href="https://drive.google.com/file/d/1SJtM--p-DHdUX3u_0yo45UctBDMlNt39/view?usp=sharing" target="_blank" rel="noopener noreferrer"> 
+              Take a closer look at my research poster here! 
+            </a>
+            <br>
+            <br>
+            <p id="certificate-text"> Certification of completion </p>
+            <img class="ersp-images" src="images/project/ersp/ERSP-certificate.png" alt="ERSP Certificate" height="400"/>
+          </section>
+
+        </section>
+
+        <!-- This section is for the About Me section-->
+        <section id="about-me">
+          <h2 class="font-effect-shadow-multiple">About Me</h2>
+          <h3><u>What I do in my free time?</u> &#127925;</h3>
+          <div class="images-container">
+            <figure>
+              <img src="images/family.jpg" alt="Family" height="300">
+              <figcaption>Spending time with my family</figcaption>
+            </figure>
+            <figure>
+              <img src="images/lily.jpg" alt="Lily the cat" height="300">
+              <figcaption> Playing with this handsome cat</figcaption>
+            </figure>
+            <figure>
+              <img id="meditation" src="images/meditation.jpg" alt="Meditation" height="300">
+              <figcaption> Practicing Falun Gong meditation </figcaption>
+            </figure>
+            <figure>
+              <picture>
+                <source media="(max-width: 375px)" srcset="images/youtube-mobile.avif">
+                <img id="youtube" src="images/youtube.jpg" alt="Watching Youtube" height="250">
+              </picture>
+              <figcaption> Watching wholesome Youtube videos</figcaption>
+            </figure>
+            <figure>
+              <picture>
+                <source media="(max-width: 375px)" srcset="images/got7-mobile.jpg">
+                <img id = "got7" src="images/kpop.jpg" alt="Kpop" height="250">
+              </picture>
+              <figcaption> Listening to catchy K-Pop songs</figcaption>
+            </figure>
+          </div>
+          
+
+          <h3><u>Why Software Engineer?</u> &#128187;</h3>
+          <div id="answer-wrapper">
+            <input type="checkbox" id="answer-1">
+            <label for = "answer-1"> Because I like computers and technology. </label>
+            <br>
+            <input type="checkbox" id="answer-2">
+            <label for = "answer-2"> Because there are many job opportunities. </label>
+            <br>
+            <input type="checkbox" id="answer-3">
+            <label for = "answer-3"> Because I enjoy working in a team. </label>
+            <br>
+            <input type="checkbox" id="answer-4">
+            <label for = "answer-4"> Because I can make my own website/ application. </label>
+            <br>
+            <input type="checkbox" id="answer-5" checked>
+            <label for = "answer-5"> All of the above </label>
+          </div>
+
+          <h3><u>Some Fun Facts about Me!</u> &#127758;</h3>
+          <ol id="fun-facts">
+            <li> I went to 4 different high schools, 1 for each year!</li>
+            <li> I have a few stitches on my the top of my head due to an accident with a hammock during my childhood days.</li>
+            <li> I used to receive a certificate from a Congressional Art Competition.</li>
+          </ol>
+          <div class="images-container">
+            <figure>
+              <img src="images/certificate.jpg" width="400" alt="Art Certificate" />
+              <figcaption>My certificate from the 2019 Congressional Art Competition. </figcaption>
+            </figure>
+            <figure>
+              <img src="images/flower.jpg" width="400" alt="Flower picture" />
+              <figcaption>This is the picture taken by me that I submitted. </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- This section is for the Contact Me section-->
+        <section id="contact">
+          <h2 class="font-effect-shadow-multiple"> Contact Me </h2>
+          <div id="form-wrapper">
+            <div id="social-media-wrapper">
+              <a href="https://www.linkedin.com/in/angelina-le-11042000/" target="_blank" rel="noopener noreferrer">
+                <img src="images/logo/linkedin-logo.avif" alt = "LinkedIn" height = "50">
+              </a>
+              <a href="https://github.com/angelinale1104" target="_blank" rel="noopener noreferrer">
+                <img src="images/logo/github-logo.avif" alt = "GitHub" height = "50">
+              </a>
+              <a href="https://www.instagram.com/l.q.baongoc/" target="_blank" rel="noopener noreferrer">
+                <img src="images/logo/instagram-logo.avif" alt = "Instagram" height = "50">
+              </a>
+              <a href="mailto:angelinale1104@gmail.com" target="_blank" rel="noopener noreferrer">
+                <img src="images/logo/gmail-logo.avif" alt = "Email" height = "50">
+              </a>
+            </div>
+            <form name="submit-to-google-sheet"> 
+              <fieldset id="contact-form">
+                <br>
+                <p>
+                  <label for="first-name">First name:</label>
+                  <input type="text" id="first-name" name="first-name" placeholder="Angelina"><br><br>
+                </p>
+    
+                <p>
+                  <label for="last-name">Last name:</label>
+                  <input type="text" id="last-name" name="last-name" placeholder="Le"><br><br>
+                </p>
+    
+                <p>
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" placeholder="qble@ucsd.edu"><br><br>
+                </p>
+                <textarea id="message" name="message" rows="10" cols="70" placeholder="Please type your message here"></textarea> 
+                <br><br>
+                <div id="submit">
+                  <button id="submit-button" type='submit'>Submit</button> 
+                </div>
+              </fieldset> 
+            </form>
+          </div>
+        </section>
+        
+        <div class="scroll-top">
+          <a class="scroll-top__link" href="#">🔝</a>
+        </div>
+
+        <!-- THIS SECTION WILL BE PRUNED OUT LATER. THIS SECTION IS ONLY FOR EXPERIMENT PURPOSES -->
+        <section id="experiment">
+          <h2 class="font-effect-shadow-multiple"> Experiment </h2>
+          <strong>(This section will be removed!)</strong>
+          <p id="experiment-text"> Experiment Form </p>
+          <form>
+            <fieldset>
+              <h3>
+                <label for="song_name">
+                Question 1: What is the name of this song?
+                </label>
+              </h3>
+              <audio controls> 
+                <source src = "audio/audio.mp3" type = "audio/mp3">
+              </audio>
+              <br>
+              <br>
+              <input list="song_names" name="song" id="song_name">
+              <datalist id = "song_names">
+                  <option value="Ddu Du Ddu Du">
+                  <option value="Dynamite">
+                  <option value="Dumb Dumb">
+                  <option value="Dope">
+              </datalist>
+
+              <h3>Question 2: What is the name of this K-Pop MV?</h3>
+              <video width="320" height="190" controls>
+                <source src="video/video.mp4" type = "video/mp4">
+              </video>
+              <br>
+              <br>
+              <select>
+                <option value = "Dance The Night Away"> Dance The Night Away </option>
+                <option value = "Lalisa"> Lalisa </option>
+                <option value = "Loco"> Loco </option>
+                <option value = "Love So Sweet"> Love So Sweet</option>
+              </select>
+
+              <h3>Question 3: What is my favorite programming language?</h3>
+              <input type="radio" name="languages" id="Python">
+              <label for="Python"><code>Python</code></label>
+              <br>
+              <input type="radio" name="languages" id="Java">
+              <label for="Java"><code>Java</code></label>
+              <br>
+              <input type="radio" name="languages" id="C">
+              <label for="C"><code>C</code></label>
+              <br>
+              <input type="radio" name="languages" id="C++">
+              <label for="C++"><code>C++</code></label>
+              <br>
+
+              <h3>Question 4: Who is my ultimate K-Pop bias?</h3>
+              <label for="groups" id="option">Choose a K-Pop idol:</label>
+              <select name="groups" id="groups">
+                <optgroup label="GOT7">
+                  <option value="Jackson">Jackson</option>
+                  <option value="Jinyoung">Jinyoung</option>
+                </optgroup>
+                <optgroup label="Red Velvet">
+                  <option value="Wendy">Wendy</option>
+                  <option value="Joy">Joy</option>
+                </optgroup>
+                <optgroup label="Mamamoo">
+                  <option value="Hwasa">Hwasa</option>
+                  <option value="Solar">Solar</option>
+                </optgroup>
+              </select>
+              <br>
+              <br>
+              <input type="submit">
+            </fieldset>
+          </form>
+
+          <section id="misc">
+            <h3> Miscellaneous </h3>
+            <h4> Item 1:</h4>
+            <pre> 
+              I just want to              
+              TEST         
+              the pre tag here! 
+              That is why          I spaced out and used      random line breaks.
+            </pre>
+    
+            <h4> Item 2: </h4>
+            <table>
+              <caption>My first quarter's transcript </caption>
+              <colgroup>
+                <col span="2">
+                <col style="background-color:greenyellow">
+              </colgroup>
+              <tr>
+                <th>Class</th>
+                <th>Professor</th>
+                <th>Grade</th>
+              </tr>
+              <tr>
+                <td>CSE 8A</td>
+                <td>Sorin Lerner</td>
+                <td>A+</td>
+              </tr>
+              <tr>
+                <td>MATH 20B</td>
+                <td>Nathan Green</td>
+                <td>A-</td>
+              </tr>
+              <tr>
+                <td>WCWP 10A</td>
+                <td>Jeff Gagnon</td>
+                <td>A-</td>
+              </tr>
+            </table>
+    
+            <h4> Item 3: </h4>
+            <iframe id="iframe-example"
+              title="Inline Frame Example"
+              width="300"
+              height="200"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+            </iframe>
+    
+            <h4> Item 4: </h4>
+            <details>
+              <summary>Click on me to read more!</summary>
+              Hello. I want to use this space to test out how to use the "details" and "summary" tags!
+            </details>
+          
+            <h4> Item 5: </h4>
+            <p> I used the "template" tag here but you cannot see it!</p>
+            <template>
+              <h3> Hi, I guess you only see me if you open the Chrome Dev Tool!</h3>
+              <p> If I want the user to see this content, I might have to use Javascript... </p>
+            </template>
+    
+            <h4> Item 6: </h4>
+            <p> I created this circle using the inline tag "svg"</p>
+            <svg width="100" height="100">
+              <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="pink" />
+            </svg>
+    
+            <h4> Item 7: </h4>
+            <canvas id="my-canvas" width="800" height="60"></canvas>
+              
+            <script>
+              var c = document.getElementById("my-canvas");
+              var ctx = c.getContext("2d");
+              ctx.font = "30px Arial";
+              ctx.strokeText("I want to test out how to use 'canvas' in HTML.",10,50);
+            </script> 
+          </section>
+        </section>
+      </main>
+
+      <hr>
+
+      <footer>
+        <p>
+          This page is built from scratch by <span>Angelina Le</span>
+          <br>
+          <a href="mailto:angelinale1104@gmail.com" target="_blank" rel="noopener noreferrer">angelinale1104@gmail.com</a>
+        </p>
+        <picture>
+          <source type="image/avif" srcset="images/logo/new-logo.avif">
+          <img src="images/logo/new-logo.png" id = "portfolio-logo" alt="Portfolio Logo" height="70" >
+        </picture>
+      </footer>
+    </div>
+
+    <!-- ADDING GOOGLE ANALYTICS -->
+    <script type="module">
+      // Import the functions we need from the SDKs
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+
+      // Web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCkqGr45f0DZUPOsJNnJ3lKTD0J9fBOBrQ",
+        authDomain: "cse134-hw5-353d9.firebaseapp.com",
+        projectId: "cse134-hw5-353d9",
+        storageBucket: "cse134-hw5-353d9.appspot.com",
+        messagingSenderId: "505738585134",
+        appId: "1:505738585134:web:47a085f56187abef79ebbf",
+        measurementId: "G-YL1TLYN0EG"
+      };
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- ADD AOS ANIMATION -->
+    <script>
+      // Disable the animation for mobile version!
+      AOS.init({disable: function() {
+        var maxWidth = 900;
+        return window.innerWidth < maxWidth;
+      }});
+      window.addEventListener('load', AOS.refresh);
+    </script>
+
+    <!-- LINK THE SUBMIT BUTTON TO A GOOGLE SHEET TO STORE INFO -->
+    <script>
+      // Made a Google Script that can collect the info from the HTML form and import to the Google Sheets
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzj1Rt3ezo8ia_yoBBuaUT_RnNNb_gRMwMTeVf9_qttwhLyNQt9n2nSRNBONJSDejYc/exec'
+      const form = document.forms['submit-to-google-sheet']
+
+      // If the user submit the form, 
+      // the browser will let the user knows if the info has been submitted successfully or not
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => alert('Info has been submitted successfully! :)'))
+          .catch(error => console.error('There have been some errors! :(', error.message))
+
+        // All previous inputs will be cleared upon the submission
+        document.getElementById("first-name").value = "";
+        document.getElementById("last-name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+      })
+    </script>
+  </body>
+</html>

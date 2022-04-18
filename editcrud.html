@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title> CRUD App </title>
+    <link href= "editcrud.css" rel="stylesheet"/>
+    <script type="module">
+      import {addPosts} from "./editcrud.js";
+      import {displayPosts} from "./editcrud.js";
+      import {editPosts} from "./editcrud.js";
+      import {deletePosts} from "./editcrud.js";
+
+      let addElem = document.getElementById("add");
+      addElem.addEventListener("click", addPosts());
+
+      displayPosts();
+      editPosts();
+      deletePosts();
+
+      const emailVal = JSON.parse(localStorage.getItem("localEmail"));
+      document.getElementById('email').innerHTML = emailVal;
+      console.log(emailVal);
+    </script>
+  </head>
+  <body>
+    <main>
+      <div id="topbar-logged">
+        <p id="logged"> You are logged in as: <span id="email"></span> </p>
+        <a href="./crud.html">
+          <input type="submit" value="Sign Out" id="signout-button"/>
+        </a>
+      </div>
+      <h1 class="font-effect-shadow-multiple"> List of Blog Posts </h1>
+      <p id="no-post"></p>
+
+      <ul id="list-of-posts">
+      </ul>
+      <div id= "button-wrapper"> 
+        <button id="add" type='button'> Add Blog Posts </button> 
+      </div>
+
+
+      <dialog id="crud-dialog">
+        <form id="add-form" method="dialog">
+          <label for="title">Post Title: </label>
+          <input type="text" id="title" name="title">
+          <br><br>
+          <label for="date">Post Date: </label>
+          <input type="date" id="date" name="date">
+          <br><br>
+          <label for="author">Post Author: </label>
+          <input type="text" id="author" name="author">
+          <br><br>
+          <label for="summary">Post Content: </label>
+          <input type="textarea" id="summary" name="summary">
+          <br><br>
+          <button id="cancel" type='button'> Cancel </button> 
+          <button id="save" type='button'>Save</button> 
+        </form>
+      </dialog>
+
+
+      <dialog id="edit-dialog">
+        <form id="edit-form" method="dialog">
+          <label for="title">Post Title: </label>
+          <input type="text" id="edit-title" name="title">
+          <br><br>
+          <label for="date">Post Date: </label>
+          <input type="date" id="edit-date" name="date">
+          <br><br>
+          <label for="author">Post Author: </label>
+          <input type="text" id="edit-author" name="author">
+          <br><br>
+          <label for="summary">Post Content: </label>
+          <input type="textarea" id="edit-summary" name="summary">
+          <br><br>
+          <button id="edit-cancel" type='button'> Cancel </button> 
+          <button id="edit-save" type='button'>Save</button> 
+        </form>
+      </dialog>
+
+      <dialog id="delete-dialog">
+        <p>Do you want to delete this post?</p>
+        <button id="ok-delete">Ok</button>  
+        <button id="cancel-delete">Cancel</button>  
+      </dialog>
+    </main>
+  </body>
+</html>

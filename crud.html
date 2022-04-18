@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title> CRUD App </title>
+    <link href= "crud.css" rel="stylesheet"/>
+    <script type="module">
+      import {displayPosts} from "./crud.js";
+    
+      // Only intialize the local storage if it's the first visit!
+      if (! localStorage.noFirstVisit) {
+        console.log('first time');    
+        const title = ["Post 1", "Post 2", "Post 3"];
+        localStorage.setItem("localTitle", JSON.stringify(title));
+
+        const dateArr = ["2021-12-24", "2022-01-04", "2022-02-16"];
+        localStorage.setItem("localDate", JSON.stringify(dateArr));
+
+        const summaryArr = ["Summary 1", "Summary 2", "Summary 3"];
+        localStorage.setItem("localSummary", JSON.stringify(summaryArr));
+
+        const authorArr = ["Angelina Le", "Thomas Powell", "Kimmy Smith"];
+        localStorage.setItem("localAuthor", JSON.stringify(authorArr));
+        localStorage.noFirstVisit = "1";
+        displayPosts();
+      }
+
+      // If not the first visit, just display the list of posts.
+      else {
+        displayPosts();
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <div id="topbar">
+        <div id = "top-left">
+          <a href="./index.html">
+            <input type="submit" value="Go Back To Homepage" id="signin-button"/>
+          </a>
+        </div>
+        <div id="top-right">
+          <p id="not-logged"> You are not logged in </p>
+          <a href="./loginform.html">
+            <input type="submit" value="Sign In" id="signin-button"/>
+          </a>
+        </div>
+      </div>
+      <h1 class="font-effect-shadow-multiple"> List of Blog Posts </h1>
+
+      <p id="no-post"></p>
+
+      <ul id="list-of-posts">
+      </ul>
+    </main>
+  </body>
+</html>

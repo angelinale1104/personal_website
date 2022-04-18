@@ -1,0 +1,145 @@
+/* crud.css */
+@import url('https://fonts.googleapis.com/css?family=Poppins&effect=shadow-multiple');
+
+body {
+  background-color: #cfbaa7;
+}
+
+h1 {
+  text-align: center;
+  margin-left: 0.5em;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3em;
+  color: #8f4f0e;
+}
+
+ul {
+  position: relative;
+  list-style-type: none;
+  margin: 0 2em 2em;
+  padding: 0;
+}
+
+li {
+  border: 2.5px solid #8f4f0e;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5em;
+  margin: 1.5em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#left-div {
+  flex-grow: 2;
+  margin-right: 1em;
+}
+
+#right-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.edit-btn:active,
+.del-btn:active,
+#add:active {
+  transform: scale(0.9);
+}
+
+#add {
+  background: #8f4f0e;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow:5px 5px 5px black;
+  padding: 0.8em;
+  font-size: 1em;
+}
+
+#button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#topbar-logged, 
+#topbar,
+#top-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#topbar-logged {
+  justify-content: flex-end;
+  margin-right: 3.5em;
+}
+
+#top-right {
+  margin-left: 43em;
+}
+
+#top-left {
+  margin-left: 3em;
+}
+
+#not-logged,
+#logged {
+  margin-left: -2em;
+  font-size: 1.3em;
+  background-color: white;
+  border: 2px solid #8f4f0e;
+  border-radius: 10px;
+  padding: 0.4em;
+}
+
+#no-post {
+  text-align: center;
+  font-size: 2em;
+}
+
+/* SIGN IN BUTTON */
+#signin-button {
+  margin-left: 1em;
+  height: 3em;
+  background-color: #8f4f0e;
+  color: white;
+  font-size: medium;
+  border-radius: 0.7em;
+  padding: 0.7em;
+  font-weight: bold;
+}
+
+#signin-button:hover {
+  background-color: wheat;
+  color: #8f4f0e;
+  font-weight: bold;
+}
+
+#signin-button:active {
+  transform: scale(0.9);
+}
+
+/* SIGN OUT BUTTON */
+#signout-button {
+  margin-left: 1em;
+  height: 3em;
+  background-color: #8f4f0e;
+  color: white;
+  font-size: medium;
+  border-radius: 0.7em;
+  padding: 0.7em;
+  font-weight: bold;
+}
+
+#signout-button:hover {
+  background-color: wheat;
+  color: #8f4f0e;
+  font-weight: bold;
+}
+
+#signout-button:active {
+  transform: scale(0.9);
+}
+
+

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title> Part 1 - HTTP with JavaScript </title>
+    <link href= "styledmethod.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <main>
+      <h1 class="font-effect-shadow-multiple"> PART 1: HTTP With JavaScript</h1>
+      <form id="myForm">
+        <fieldset>
+          <br>
+          <p>
+            <label for="id">ID: </label>
+            <input type="text" id="id" name="id">
+          </p>
+          <p>
+            <label for="articleName">Article Name:</label>
+            <input type="text" id="articleName" name="articleName">
+          </p>
+          <p class="textarea-wrapper">
+            <label for="articleBody">Article Body:</label>
+            <textarea id="articleBody" name="articleBody" cols="50" rows ="5"></textarea>
+          </p>
+          <p id="date"></p>
+          <br>
+
+          <div class="button-wrapper"> 
+            <!-- POST HTTP Method -->
+            <!-- Endpoint: https://httpbin.org/post -->
+            <button type="button" id="postBtn"> Post </button>
+
+            <!-- GET HTTP Method -->
+            <!-- Endpoint: https://httpbin.org/get -->
+            <button type="button" id="getBtn"> Get </button>
+
+            <!-- PUT HTTP Method -->
+            <!-- Endpoint: https://httpbin.org/put -->
+            <button type="button" id="putBtn"> Put </button>
+
+            <!-- DELETE HTTP Method -->
+            <!-- Endpoint: https://httpbin.org/delete -->
+            <button type="button" id="deleteBtn"> Delete </button>
+          </div>
+        </fieldset>
+      </form>
+      <output id="response">
+        <table align = "center" id="table" border="1">
+          <thead id="table-header">
+          </thead>
+          <tbody id="table-body">
+          </tbody>
+        </table>
+      </output> 
+    </main>
+
+    <script>
+      // Get the current date to display
+      date = new Date();
+      year = date.getFullYear();
+      month = date.getMonth() + 1;
+      day = date.getDate();
+      document.getElementById("date").innerHTML = month + "/" + day + "/" + year;
+
+      // POST METHOD USING XHR
+      const postBtn = document.getElementById('postBtn');
+
+      postBtn.addEventListener('click', (event) => {
+        let xhr = new XMLHttpRequest();
+        let id = document.getElementById("id").value;
+        let articleName = document.getElementById("articleName").value;
+        let articleBody = document.getElementById("articleBody").value;
+        let date = document.getElementById("date").textContent;
+        let payload = JSON.stringify({"id": id, "article-name": articleName, "article-body": articleBody});
+
+        xhr.open("POST","https://httpbin.org/post",true);
+        xhr.setRequestHeader("Content-Type", "application/json"); 
+        xhr.onreadystatechange = function(){
+          if (xhr.readyState == 4  && xhr.status == 200){
+            let responseOutput = document.getElementById("response");
+            console.log(xhr.responseText);
+            clearTable();
+            constructTable(JSON.parse(xhr.responseText));
+          }
+        };
+        xhr.send(payload);
+      });
+
+
+      // GET METHOD USING XHR
+      const getBtn = document.getElementById('getBtn');
+      getBtn.addEventListener('click', (event) => {
+        let xhr = new XMLHttpRequest();
+        let id = document.getElementById("id").value;
+        
+        xhr.open("GET","https://httpbin.org/get",true);
+        xhr.setRequestHeader("Content-Type", "application/json"); 
+        xhr.onreadystatechange = function(){
+          if (xhr.readyState == 4  && xhr.status == 200){
+            let responseOutput = document.getElementById("response");
+            console.log(xhr.responseText);
+            clearTable();
+            constructTable(JSON.parse(xhr.responseText));
+          }
+        };
+        xhr.send(null);
+      });
+
+      // PUT METHOD USING XHR
+      const putBtn = document.getElementById('putBtn');
+
+      putBtn.addEventListener('click', (event) => {
+        let xhr = new XMLHttpRequest();
+        let id = document.getElementById("id").value;
+        let articleName = document.getElementById("articleName").value;
+        let articleBody = document.getElementById("articleBody").value;
+        let date = document.getElementById("date").textContent;
+        let payload = JSON.stringify({"id": id, "article-name": articleName, "article-body": articleBody});
+
+
+        xhr.open("PUT","https://httpbin.org/put",true);
+        xhr.setRequestHeader("Content-Type", "application/json"); 
+        xhr.onreadystatechange = function(){
+          if (xhr.readyState == 4  && xhr.status == 200){
+            let responseOutput = document.getElementById("response");
+            console.log(xhr.responseText);
+            clearTable();
+            constructTable(JSON.parse(xhr.responseText));
+          }
+        };
+        xhr.send(payload);
+      });
+
+
+      // DELETE METHOD USING XHR
+      // PUT METHOD USING XHR
+      const deleteBtn = document.getElementById('deleteBtn');
+
+      deleteBtn.addEventListener('click', (event) => {
+        let xhr = new XMLHttpRequest();
+              
+        xhr.open("DELETE","https://httpbin.org/delete",true);
+        xhr.setRequestHeader("Content-Type", "application/json"); 
+        xhr.onreadystatechange = function(){
+          if (xhr.readyState == 4  && xhr.status == 200){
+            let responseOutput = document.getElementById("response");
+            console.log(xhr.responseText);
+            clearTable();
+            constructTable(JSON.parse(xhr.responseText));
+          }
+        };
+        xhr.send();
+      });
+
+      function clearTable() {
+        let tableHeader = document.getElementById('table-header');
+        tableHeader.innerHTML = "";
+
+        let tableBody = document.getElementById('table-body');
+        tableBody.innerHTML = "";
+      }
+
+      function constructTable(jsonList) {
+        let tableHeader = document.getElementById('table-header');
+        let keyHeader = document.createElement("th");
+        keyHeader.innerHTML = "JSON keys";
+        tableHeader.appendChild(keyHeader);
+
+        let valueHeader = document.createElement("th");
+        valueHeader.innerHTML = "JSON values";
+        tableHeader.appendChild(valueHeader);
+
+        let tableBody = document.getElementById('table-body');
+
+        for (var key in jsonList) {
+          let value = jsonList[key];
+          // Handle the DELETE method where the value of "json" is null/ undefined
+          if (key == "json" && (value === undefined) || (value === null)) {
+            let row = document.createElement('tr');
+            let keyData =  document.createElement('td');
+            let valueData =  document.createElement('td');
+            
+            // Append the JSON key 
+            keyData.innerHTML = key;
+            row.appendChild(keyData);
+
+            // Append the value null
+            valueData.innerHTML = null;
+            row.appendChild(valueData);
+            tableBody.appendChild(row);
+
+            // Move on to the next key
+            continue;
+          }
+          else {
+            let subkey = Object.keys(jsonList[key]);
+            let subvalue = Object.values(jsonList[key]);
+            let count = Object.keys(jsonList[key]).length;
+
+            if (key != "headers" && key != "json"){
+              let row = document.createElement('tr');
+              let keyData =  document.createElement('td');
+              let valueData =  document.createElement('td');
+
+              // Append the JSON keys
+              keyData.innerHTML = key;
+              row.appendChild(keyData);
+
+              // Append the JSON values
+              if (count > 0){
+                valueData.innerHTML = value;
+                row.appendChild(valueData);
+                tableBody.appendChild(row);
+              }
+              else {
+                valueData.innerHTML = "{}";
+                row.appendChild(valueData);
+                tableBody.appendChild(row);
+              }
+            }
+              
+            if(key != ("data") && key != ("origin") && key != ("url")) {
+              for (let i = 0; i < count; i++) {
+                let row = document.createElement('tr');
+                let keyData =  document.createElement('td');
+                let valueData = document.createElement('td');
+
+                // Append the JSON keys
+                keyData.innerHTML = key + "." + subkey[i];
+                row.appendChild(keyData);
+                tableBody.appendChild(row);
+
+                // Append the JSON values
+                valueData.innerHTML = subvalue[i];
+                row.appendChild(valueData);
+                tableBody.appendChild(row);
+              }
+            }   
+          }
+        }  
+      }
+    </script>
+  </body>
+</html>
