@@ -6,7 +6,7 @@
     <meta name="author" content="Angelina Le">
     <meta name="viewport" content="width=device-width">    
 
-    <title>Angelina's Personal Portfolio - HW5</title>
+    <title>Angelina's Personal Portfolio</title>
     <link rel="icon" type="image/x-icon" href="images/logo/logo.avif">
 
     <!-- Placeholder for the link and script tags-->
@@ -38,7 +38,6 @@
                 <li class="menu__group"><a href="#projects" class="menu__link nav-link text-underlined">Projects</a></li>
                 <li class="menu__group"><a href="#about-me" class="menu__link nav-link text-underlined">About Me</a></li>
                 <li class="menu__group"><a href="#contact" class="menu__link nav-link text-underlined">Contact Me</a></li>
-                <li class="menu__group"><a href="methodtest.html" class="menu__link nav-link text-underlined">HTTP</a></li>
                 <li class="menu__group"><a href="crud.html" class="menu__link nav-link text-underlined">View Blog</a></li>
               </ul>
             </nav>
@@ -570,158 +569,6 @@
         <div class="scroll-top">
           <a class="scroll-top__link" href="#">🔝</a>
         </div>
-
-        <!-- THIS SECTION WILL BE PRUNED OUT LATER. THIS SECTION IS ONLY FOR EXPERIMENT PURPOSES -->
-        <section id="experiment">
-          <h2 class="font-effect-shadow-multiple"> Experiment </h2>
-          <strong>(This section will be removed!)</strong>
-          <p id="experiment-text"> Experiment Form </p>
-          <form>
-            <fieldset>
-              <h3>
-                <label for="song_name">
-                Question 1: What is the name of this song?
-                </label>
-              </h3>
-              <audio controls> 
-                <source src = "audio/audio.mp3" type = "audio/mp3">
-              </audio>
-              <br>
-              <br>
-              <input list="song_names" name="song" id="song_name">
-              <datalist id = "song_names">
-                  <option value="Ddu Du Ddu Du">
-                  <option value="Dynamite">
-                  <option value="Dumb Dumb">
-                  <option value="Dope">
-              </datalist>
-
-              <h3>Question 2: What is the name of this K-Pop MV?</h3>
-              <video width="320" height="190" controls>
-                <source src="video/video.mp4" type = "video/mp4">
-              </video>
-              <br>
-              <br>
-              <select>
-                <option value = "Dance The Night Away"> Dance The Night Away </option>
-                <option value = "Lalisa"> Lalisa </option>
-                <option value = "Loco"> Loco </option>
-                <option value = "Love So Sweet"> Love So Sweet</option>
-              </select>
-
-              <h3>Question 3: What is my favorite programming language?</h3>
-              <input type="radio" name="languages" id="Python">
-              <label for="Python"><code>Python</code></label>
-              <br>
-              <input type="radio" name="languages" id="Java">
-              <label for="Java"><code>Java</code></label>
-              <br>
-              <input type="radio" name="languages" id="C">
-              <label for="C"><code>C</code></label>
-              <br>
-              <input type="radio" name="languages" id="C++">
-              <label for="C++"><code>C++</code></label>
-              <br>
-
-              <h3>Question 4: Who is my ultimate K-Pop bias?</h3>
-              <label for="groups" id="option">Choose a K-Pop idol:</label>
-              <select name="groups" id="groups">
-                <optgroup label="GOT7">
-                  <option value="Jackson">Jackson</option>
-                  <option value="Jinyoung">Jinyoung</option>
-                </optgroup>
-                <optgroup label="Red Velvet">
-                  <option value="Wendy">Wendy</option>
-                  <option value="Joy">Joy</option>
-                </optgroup>
-                <optgroup label="Mamamoo">
-                  <option value="Hwasa">Hwasa</option>
-                  <option value="Solar">Solar</option>
-                </optgroup>
-              </select>
-              <br>
-              <br>
-              <input type="submit">
-            </fieldset>
-          </form>
-
-          <section id="misc">
-            <h3> Miscellaneous </h3>
-            <h4> Item 1:</h4>
-            <pre> 
-              I just want to              
-              TEST         
-              the pre tag here! 
-              That is why          I spaced out and used      random line breaks.
-            </pre>
-    
-            <h4> Item 2: </h4>
-            <table>
-              <caption>My first quarter's transcript </caption>
-              <colgroup>
-                <col span="2">
-                <col style="background-color:greenyellow">
-              </colgroup>
-              <tr>
-                <th>Class</th>
-                <th>Professor</th>
-                <th>Grade</th>
-              </tr>
-              <tr>
-                <td>CSE 8A</td>
-                <td>Sorin Lerner</td>
-                <td>A+</td>
-              </tr>
-              <tr>
-                <td>MATH 20B</td>
-                <td>Nathan Green</td>
-                <td>A-</td>
-              </tr>
-              <tr>
-                <td>WCWP 10A</td>
-                <td>Jeff Gagnon</td>
-                <td>A-</td>
-              </tr>
-            </table>
-    
-            <h4> Item 3: </h4>
-            <iframe id="iframe-example"
-              title="Inline Frame Example"
-              width="300"
-              height="200"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
-            </iframe>
-    
-            <h4> Item 4: </h4>
-            <details>
-              <summary>Click on me to read more!</summary>
-              Hello. I want to use this space to test out how to use the "details" and "summary" tags!
-            </details>
-          
-            <h4> Item 5: </h4>
-            <p> I used the "template" tag here but you cannot see it!</p>
-            <template>
-              <h3> Hi, I guess you only see me if you open the Chrome Dev Tool!</h3>
-              <p> If I want the user to see this content, I might have to use Javascript... </p>
-            </template>
-    
-            <h4> Item 6: </h4>
-            <p> I created this circle using the inline tag "svg"</p>
-            <svg width="100" height="100">
-              <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="pink" />
-            </svg>
-    
-            <h4> Item 7: </h4>
-            <canvas id="my-canvas" width="800" height="60"></canvas>
-              
-            <script>
-              var c = document.getElementById("my-canvas");
-              var ctx = c.getContext("2d");
-              ctx.font = "30px Arial";
-              ctx.strokeText("I want to test out how to use 'canvas' in HTML.",10,50);
-            </script> 
-          </section>
-        </section>
       </main>
 
       <hr>
@@ -747,13 +594,13 @@
 
       // Web app's Firebase configuration
       const firebaseConfig = {
-        apiKey: "AIzaSyCkqGr45f0DZUPOsJNnJ3lKTD0J9fBOBrQ",
-        authDomain: "cse134-hw5-353d9.firebaseapp.com",
-        projectId: "cse134-hw5-353d9",
-        storageBucket: "cse134-hw5-353d9.appspot.com",
-        messagingSenderId: "505738585134",
-        appId: "1:505738585134:web:47a085f56187abef79ebbf",
-        measurementId: "G-YL1TLYN0EG"
+        apiKey: "AIzaSyCpd_ec1HyqnA4wie1Rgup_yJZG2ZyeNRE",
+        authDomain: "angelina-portfolio.firebaseapp.com",
+        projectId: "angelina-portfolio",
+        storageBucket: "angelina-portfolio.appspot.com",
+        messagingSenderId: "70075063126",
+        appId: "1:70075063126:web:1e306c610fa615d5f4d4f7",
+        measurementId: "G-FEGDQ0X72G"
       };
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

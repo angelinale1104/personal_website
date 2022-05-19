@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "cse134-hw5-353d9",
     "public": ".",
     "ignore": [
       "firebase.json",
