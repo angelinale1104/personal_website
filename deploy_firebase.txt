@@ -1,0 +1,16 @@
+1. Delete all Firebase files in directory
+2. Open command prompt of the PC (not the terminal in VSCode)
+3. Go to the directory that contains the all the files of the website (i.e personal-website folder) in the command prompt
+4. Type "firebase login" (login to angelinale1104@gmail.com)
+5. Type "firebase login --reauth" to make sure we can get re-authenticated by Firebase
+6. Type "firebase projects:list" to ensure we can access and see all existing Firebase projects.
+7. Type "firebase init"
+8. "Are you ready to proceed?" --> Type "Y"
+9. Use spacebar to choose "Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys"
+10. Choose "Use an existing project"
+11. Choose "angelina-portfolio"
+12. "What do you want to use as your public directory?" --> Enter "." 
+13. "Configure as a single-page app (rewrite all urls to /index.html)?" --> Type "y"
+14. "Set up automatic builds and deploys with GitHub?" --> Type "n"
+15. "File ./index.html already exists. Overwrite?" --> Type "n"
+16. After the initialization is completed, type "firebase deploy" to deploy.
