@@ -1,3 +1,3 @@
 **Name: Angelina Le**
 
-Please click this to view my [Personal Website](https://angelina-portfolio.web.app/)
+Please click this link to view my [Personal Website](https://angelina-portfolio.web.app/)
