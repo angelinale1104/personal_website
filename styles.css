@@ -312,6 +312,7 @@ figcaption {
 fieldset {
   border: 1px solid var(--brown);
 }
+
 legend {
   font-size: x-large;
   color: var(--brown);
