@@ -38,7 +38,7 @@
                 <li class="menu__group"><a href="#projects" class="menu__link nav-link text-underlined">Projects</a></li>
                 <li class="menu__group"><a href="#about-me" class="menu__link nav-link text-underlined">About Me</a></li>
                 <li class="menu__group"><a href="#contact" class="menu__link nav-link text-underlined">Contact Me</a></li>
-                <li class="menu__group"><a href="crud.html" class="menu__link nav-link text-underlined">View Blog</a></li>
+                <!-- <li class="menu__group"><a href="crud.html" class="menu__link nav-link text-underlined">View Blog</a></li> -->
               </ul>
             </nav>
           </div>      
@@ -68,7 +68,7 @@
           </div>
           <div> 
             <aside>
-              <img src="images/Angelina-Portrait.avif" alt="My Portrait" width="300" height="300">
+              <img src="images/Angelina-Portrait.jpg" alt="My Portrait" width="300" height="300">
             </aside>
           </div>
         </section>
@@ -87,10 +87,10 @@
             
             <div id = "bullet-points"> 
               <ul>
-                <li> I am currently a Junior student at University of California, San Diego </li>
+                <li> I have recently graduated from University of California, San Diego </li>
                 <li> <b><u>Major</u></b>: Computer Engineering </li>
-                <li> <b><u>GPA</u></b>: <i>3.75/ 4.00</i></li>
-                <li> <b><u>Graduation Date</u></b>: <i>06/2023</i></li>
+                <li> <b><u>GPA</u></b>: <i>3.70/ 4.00</i></li>
+                <li> <b><u>Graduation Date</u></b>: <i>03/2023</i></li>
               </ul>
             </div>
           </div>
@@ -99,6 +99,31 @@
         <!-- This section is for the Work Experience section-->
         <section id="work-experience" data-aos="fade-up" data-aos-duration="2000">
           <h2 id="work" class="font-effect-shadow-multiple"> Work Experience </h2>
+          <div id = "work-content0" data-aos="fade-left" data-aos-duration="2000">
+            <figure>
+              <img id="cg" src="images/work-experience/cg-portrait.jpg" alt="Capital Group" width="350">
+              <figcaption>
+                To learn more about Capital Group, <br>
+                <a class="figcaption-link" href="https://www.capitalgroup.com/about-us.html" target="_blank" rel="noopener noreferrer"> Click Here </a>
+              </figcaption>
+            </figure>
+            
+            <div id = "bullet-points-work0">
+              <h3>Software Engineering Summer Intern (ITG EDGE) </h3>
+              <h3>(06/2022 - 08/2022)</h3>
+              <ul>
+                <li>Shortened the time to onboard a new account by <b>53%</b>.</li>
+                <li>Finished grooming <b>12</b> stories from start to finish, inclunding the description, the intention and what technical tasks should be done.</li>
+                <li>Created a complete prototype for the client onboarding process, which helped visualize the new UI layout of the workflow.</li>
+                <li>Helped analyze the pain points in the current workflow so that adjustments and changes can be made.</li>
+                <li>Brainstormed the re-design solution to decrease the complexity of the workflow navigation, and improve the client’s experience.</li>
+                <li>Collaborated with business users to obtain the necessary requirements for the re-design solution.</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="divider"> »•» 🌸🌸🌸🌸🌸🌸🌸🌸🌸 «•« </p>
+
           <div id = "work-content1" data-aos="fade-right" data-aos-duration="2000">
             <figure>
               <img src="images/work-experience/cse-department.jpg" alt="UCSD CSE Department" width="350" height="250">
@@ -487,27 +512,46 @@
 
           <h3><u>Why Software Engineer?</u> &#128187;</h3>
           <div id="answer-wrapper">
-            <input type="checkbox" id="answer-1">
+            <input type="checkbox" id="answer-1" class="boxes">
             <label for = "answer-1"> Because I like computers and technology. </label>
             <br>
-            <input type="checkbox" id="answer-2">
+            <input type="checkbox" id="answer-2" class="boxes">
             <label for = "answer-2"> Because there are many job opportunities. </label>
             <br>
-            <input type="checkbox" id="answer-3">
+            <input type="checkbox" id="answer-3" class="boxes">
             <label for = "answer-3"> Because I enjoy working in a team. </label>
             <br>
-            <input type="checkbox" id="answer-4">
+            <input type="checkbox" id="answer-4" class="boxes">
             <label for = "answer-4"> Because I can make my own website/ application. </label>
             <br>
-            <input type="checkbox" id="answer-5" checked>
+            <input type="checkbox" id="answer-5" checked class="boxes">
             <label for = "answer-5"> All of the above </label>
+
+            <!-- Prevent the unchecked boxes from being checked and checked boxes from being unchecked-->
+            <script>
+              document.querySelector('#answer-1').onclick = (e)=>{
+                e.preventDefault();
+              }
+              document.querySelector('#answer-2').onclick = (e)=>{
+                e.preventDefault();
+              }
+              document.querySelector('#answer-3').onclick = (e)=>{
+                e.preventDefault();
+              }
+              document.querySelector('#answer-4').onclick = (e)=>{
+                e.preventDefault();
+              }
+              document.querySelector('#answer-5').onclick = (e)=>{
+                e.preventDefault();
+              }
+            </script>
           </div>
 
           <h3><u>Some Fun Facts about Me!</u> &#127758;</h3>
           <ol id="fun-facts">
-            <li> I went to 4 different high schools, 1 for each year!</li>
-            <li> I have a few stitches on my the top of my head due to an accident with a hammock during my childhood days.</li>
-            <li> I used to receive a certificate from a Congressional Art Competition.</li>
+            <li class="diff-margin"> I went to 4 different high schools, 1 for each year!</li>
+            <li class="diff-margin"> I have a few stitches on my the top of my head due to an accident with a hammock during my childhood days.</li>
+            <li class="diff-margin"> I used to receive a certificate from a Congressional Art Competition.</li>
           </ol>
           <div class="images-container">
             <figure>

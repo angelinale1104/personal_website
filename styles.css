@@ -250,14 +250,18 @@ h2:not(#name) {
   justify-content: space-evenly;
 }
 
-ol li,
-ul li {
+li:not(.diff-margin) {
   padding: 5px 0;
+}
+
+#fun-facts > li {
+  padding: 5px 20px;
 }
 
 #bullet-points {
   display: flex;
-  align-items: center;
+  margin-top: 2.5em;
+  /* align-items: center; */
 }
 
 figcaption {
@@ -272,12 +276,17 @@ figcaption {
   border-radius: 20px;
 }
 
+#work-content0,
 #work-content1,
 #work-content2,
 #work-content3 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+#cg {
+  margin-left: 2.2rem;
 }
 
 #trio {
@@ -478,6 +487,11 @@ details {
   justify-content: space-evenly;
 }
 
+.boxes {
+  margin: 0.7em 1.5em;
+  display:inline-block;
+}
+
 /* CONTACT ME */
 #contact-form > p > label { 
   display: table-cell; 
@@ -661,6 +675,7 @@ footer > p > span {
   }
 
   #education-content,
+  #work-content0,
   #work-content1 {
     display: flex;
     flex-direction: column;
@@ -678,6 +693,7 @@ footer > p > span {
   }
 
   /* WORK EXPERIENCE */
+  #work-content0 > figure > img,
   #work-content1 > figure > img,
   #work-content2 > figure > img,
   #work-content3 > figure > img {
@@ -686,10 +702,12 @@ footer > p > span {
   }
 
   #trio,
+  #cg,
   #att {
     margin:0;
   }
 
+  #work-content0 > figure > figcaption,
   #work-content1 > figure > figcaption,
   #work-content2 > figure > figcaption,
   #work-content3 > figure > figcaption,
@@ -708,6 +726,7 @@ footer > p > span {
     margin: 0;
   }
 
+  #bullet-points-work0,
   #bullet-points-work1,
   #bullet-point-work2,
   #bullet-point-work3 {
@@ -717,6 +736,7 @@ footer > p > span {
     margin: 0;
   }
 
+  #bullet-points-work0 > h3,
   #bullet-points-work1 > h3,
   #bullet-point-work2 > h3,
   #bullet-point-work3 > h3 {
@@ -724,12 +744,14 @@ footer > p > span {
     margin-bottom: 0.4em;
   }
 
+  #work-content0,
   #work-content2,
   #work-content3 {
     display: flex;
     flex-direction: column;
   }
 
+  #bullet-points-work0 > ul,
   #bullet-points-work1 > ul,
   #bullet-point-work2 > ul,
   #bullet-point-work3 > ul {
@@ -916,6 +938,7 @@ footer > p > span {
     margin-bottom: 1.5em;
   }
 
+  #answer-wrapper,
   #fun-facts {
     padding-left: 0.6em;
   }
@@ -1121,6 +1144,7 @@ footer > p > span {
   }
 
   #education-content,
+  #work-content0,
   #work-content1 {
     display: flex;
     flex-direction: column;
@@ -1138,6 +1162,7 @@ footer > p > span {
   }
 
   /* WORK EXPERIENCE */
+  #work-content0 > figure > img,
   #work-content1 > figure > img,
   #work-content2 > figure > img,
   #work-content3 > figure > img {
@@ -1146,10 +1171,12 @@ footer > p > span {
   }
 
   #trio,
+  #cg,
   #att {
     margin:0;
   }
 
+  #work-content0 > figure > figcaption,
   #work-content1 > figure > figcaption,
   #work-content2 > figure > figcaption,
   #work-content3 > figure > figcaption,
@@ -1168,6 +1195,7 @@ footer > p > span {
     margin: 0;
   }
 
+  #bullet-points-work0,
   #bullet-points-work1,
   #bullet-point-work2,
   #bullet-point-work3 {
@@ -1177,6 +1205,7 @@ footer > p > span {
     margin: 0;
   }
 
+  #bullet-points-work0 > h3,
   #bullet-points-work1 > h3,
   #bullet-point-work2 > h3,
   #bullet-point-work3 > h3 {
@@ -1184,12 +1213,14 @@ footer > p > span {
     margin-bottom: 0.4em;
   }
 
+  #work-content0,
   #work-content2,
   #work-content3 {
     display: flex;
     flex-direction: column;
   }
 
+  #bullet-points-work0 > ul,
   #bullet-points-work1 > ul,
   #bullet-point-work2 > ul,
   #bullet-point-work3 > ul {
@@ -1375,6 +1406,7 @@ footer > p > span {
     margin-bottom: 1.5em;
   }
 
+  #answer-wrapper,
   #fun-facts {
     padding-left: 0.6em;
   }
@@ -1598,6 +1630,7 @@ footer > p > span {
   }
 
   /* WORK EXPERIENCE */
+  #work-content0 > figure > img,
   #work-content1 > figure > img,
   #work-content2 > figure > img,
   #work-content3 > figure > img {
@@ -1606,13 +1639,16 @@ footer > p > span {
   }
 
   #trio,
+  #cg,
   #att {
     margin:0;
   }
 
+  #work-content0 > figure > figcaption,
   #work-content1 > figure > figcaption,
   #work-content2 > figure > figcaption,
   #work-content3 > figure > figcaption,
+  #bullet-points-work0 > ul > li,
   #bullet-points-work1 > ul > li,
   #bullet-point-work2 > ul > li,
   #bullet-point-work3 > ul > li,
@@ -1624,6 +1660,7 @@ footer > p > span {
     font-size: 1.3em;
   }
 
+  #bullet-points-work0 > ul > li,
   #bullet-points-work1 > ul > li,
   #bullet-point-work2 > ul > li,
   #bullet-point-work3 > ul > li {
@@ -1640,6 +1677,7 @@ footer > p > span {
     margin: 0;
   }
 
+  #bullet-points-work0,
   #bullet-points-work1,
   #bullet-point-work2,
   #bullet-point-work3 {
@@ -1650,6 +1688,7 @@ footer > p > span {
     margin: 0;
   }
 
+  #bullet-points-work0 > h3,
   #bullet-points-work1 > h3,
   #bullet-point-work2 > h3,
   #bullet-point-work3 > h3 {
@@ -1658,6 +1697,7 @@ footer > p > span {
     margin-top: 0.2em;
   }
 
+  #bullet-points-work0 > h3,
   #bullet-points-work1 > h3,
   #bullet-point-work2 > h3,
   #bullet-point-work3 > h3 {
@@ -1665,12 +1705,14 @@ footer > p > span {
     margin-bottom: 0.4em;
   }
 
+  #work-content0,
   #work-content2,
   #work-content3 {
     display: flex;
     flex-direction: column;
   }
 
+  #bullet-points-work0 > ul,
   #bullet-points-work1 > ul,
   #bullet-point-work2 > ul,
   #bullet-point-work3 > ul {
@@ -1857,6 +1899,7 @@ footer > p > span {
     margin-bottom: 1.5em;
   }
 
+  #answer-wrapper,
   #fun-facts {
     margin-left: 3em;
     margin-right: 3em;
